@@ -36,6 +36,10 @@ def get_text_chunks(text):
 def get_vectorstore(text_chunks):
     embeddings = OpenAIEmbeddings()
     # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+    # embeddings = HuggingFaceInstructEmbeddings(model_name="intfloat/e5-mistral-7b-instruct")
+    embeddings = HuggingFaceInstructEmbeddings(model_name="intfloat/multilingual-e5-large")
+    # embeddings = HuggingFaceInstructEmbeddings(model_name="BAAI/bge-m3")
+    # embeddings = HuggingFaceInstructEmbeddings(model_name="nomic-ai/nomic-embed-text-v1")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
