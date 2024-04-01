@@ -12,6 +12,7 @@ from langchain.llms import HuggingFaceHub
 import os
 
 os.environ["OPENAI_API_KEY"] = ""
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 def get_pdf_text(pdf_docs):
     text = ""
