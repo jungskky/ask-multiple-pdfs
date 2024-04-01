@@ -34,7 +34,7 @@ def get_text_chunks(text):
 
 
 def get_vectorstore(text_chunks):
-    embeddings = OpenAIEmbeddings()
+    # embeddings = OpenAIEmbeddings()
     # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     # embeddings = HuggingFaceInstructEmbeddings(model_name="intfloat/e5-mistral-7b-instruct")
     embeddings = HuggingFaceInstructEmbeddings(model_name="intfloat/multilingual-e5-large")
